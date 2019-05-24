@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="WeatherViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="E0h-aX-oBb" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akF-Q1-LiZ">
+                                <rect key="frame" x="16" y="97" width="285" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-C0-URu">
+                                <rect key="frame" x="16" y="164" width="285" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBx-2Y-pNg">
+                                <rect key="frame" x="16" y="231" width="285" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th1-Kr-XgW" userLabel="Change City Button">
+                                <rect key="frame" x="309" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="p6a-Rh-5P9"/>
+                                    <constraint firstAttribute="height" constant="50" id="qRJ-AK-fNV"/>
+                                </constraints>
+                                <state key="normal" image="switch">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P1Y-dL-zMM" kind="presentation" identifier="changeCityName" id="miH-QC-hxD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-h5-3lS">
+                                <rect key="frame" x="16" y="298" width="285" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C11-fU-d6q" userLabel="Weather Condition Image View">
+                                <rect key="frame" x="191" y="298" width="184" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9ML-YC-uq4">
+                                <rect key="frame" x="30" y="443" width="322" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci2-xk-b42">
+                                <rect key="frame" x="233" y="257" width="186" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E0h-aX-oBb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="7vB-96-MsA"/>
+                            <constraint firstItem="E0h-aX-oBb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="CN9-ZE-mQk"/>
+                            <constraint firstItem="th1-Kr-XgW" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OCL-NQ-UMw"/>
+                            <constraint firstAttribute="trailing" secondItem="E0h-aX-oBb" secondAttribute="trailing" id="hub-6C-cfa"/>
+                            <constraint firstAttribute="bottom" secondItem="E0h-aX-oBb" secondAttribute="bottom" id="iES-6G-TkF"/>
+                            <constraint firstItem="th1-Kr-XgW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="mHS-yD-ZBh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentTempLabel" destination="akF-Q1-LiZ" id="qcb-GY-hxC"/>
+                        <outlet property="descriptionLabel" destination="ci2-xk-b42" id="rtq-ny-S8x"/>
+                        <outlet property="humidityLabel" destination="WB1-h5-3lS" id="toF-NE-Pdw"/>
+                        <outlet property="mapView" destination="9ML-YC-uq4" id="6ti-ZU-286"/>
+                        <outlet property="maxTempLabel" destination="Kop-C0-URu" id="paC-TT-j7F"/>
+                        <outlet property="minTempLabel" destination="eBx-2Y-pNg" id="lTa-cq-VWe"/>
+                        <outlet property="weatherIcon" destination="C11-fU-d6q" id="AG2-gZ-vGX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="258.62068965517244"/>
+        </scene>
+        <!--Change City View Controller-->
+        <scene sceneID="9fV-L8-Kpp">
+            <objects>
+                <viewController id="P1Y-dL-zMM" customClass="ChangeCityViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8SU-81-qPl"/>
+                        <viewControllerLayoutGuide type="bottom" id="gDk-eH-nyp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R49-jx-b8b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-Xh-KLm" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvW-e3-7QL" userLabel="Back Button">
+                                <rect key="frame" x="16" y="86" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="left">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="Rbp-rZ-Byc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-ob-gbM" userLabel="City Name Text Field">
+                                <rect key="frame" x="93" y="88" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-LZ-x6P">
+                                <rect key="frame" x="110" y="126" width="139" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Weather">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeatherPressed:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="zMR-Ae-Y2b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-Hh-wA6">
+                                <rect key="frame" x="59" y="204" width="149" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Stockholm">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStockholmWeatherDetails:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="D77-YH-rUN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbE-dC-tOf">
+                                <rect key="frame" x="49" y="592" width="149" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Nairobi">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getNairobiWeatherDetails:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="qwB-ez-ePV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHd-l3-gKE">
+                                <rect key="frame" x="240" y="405" width="42" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azN-WD-rdZ">
+                                <rect key="frame" x="49" y="392" width="149" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Bengaluru">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getBengaluruWeatherDetails:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="qN4-Q5-TBx"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-bC-yBV">
+                                <rect key="frame" x="59" y="256" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eTR-eT-snv">
+                                <rect key="frame" x="59" y="448" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u9D-95-DFP">
+                                <rect key="frame" x="59" y="642" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-0n-Ind">
+                                <rect key="frame" x="240" y="222" width="42" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaY-RQ-F34">
+                                <rect key="frame" x="240" y="610" width="42" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CrA-Xh-KLm" firstAttribute="top" secondItem="R49-jx-b8b" secondAttribute="top" id="EKf-16-7Gr"/>
+                            <constraint firstAttribute="bottom" secondItem="CrA-Xh-KLm" secondAttribute="bottom" id="Xk1-0T-ot1"/>
+                            <constraint firstItem="CrA-Xh-KLm" firstAttribute="leading" secondItem="R49-jx-b8b" secondAttribute="leading" id="caX-KL-wlx"/>
+                            <constraint firstAttribute="trailing" secondItem="CrA-Xh-KLm" secondAttribute="trailing" id="s2P-NW-QCz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SGE-7i-E75"/>
+                    <connections>
+                        <outlet property="bengaluruMapView" destination="eTR-eT-snv" id="Pq8-93-YBa"/>
+                        <outlet property="bengaluruTempLabel" destination="OHd-l3-gKE" id="sGo-7s-Ood"/>
+                        <outlet property="changeCityTextField" destination="0F0-ob-gbM" id="RJQ-WZ-AQ3"/>
+                        <outlet property="nairobiMapView" destination="u9D-95-DFP" id="dNr-LY-Lt4"/>
+                        <outlet property="nairobiTempLabel" destination="PaY-RQ-F34" id="tvN-6F-LGQ"/>
+                        <outlet property="stockholmMapView" destination="qhm-bC-yBV" id="Oad-sG-pmf"/>
+                        <outlet property="stockholmTempLabel" destination="NWZ-0n-Ind" id="oQe-aX-oqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wa8-oH-wtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="259.35960591133005"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="500" height="755"/>
+        <image name="cityBackground" width="600" height="399.5"/>
+        <image name="left" width="32" height="32"/>
+        <image name="switch" width="64" height="64"/>
+    </resources>
+</document>
